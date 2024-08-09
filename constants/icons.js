@@ -4,8 +4,9 @@ import circle_plus from "../assets/icons/circle-plus-solid.png";
 import envelope from "../assets/icons/envelope-solid.png";
 import envelopeOrange from "../assets/icons/envelope-solid-orange.png"
 import smile from "../assets/icons/face-smile-regular.png";
-import openEyes from "../assets/icons/face-grin-wide-regular-orange.png"
-import closedEyes from "../assets/icons/face-smile-beam-regular-orange.png"
+import openEyes from "../assets/icons/face-grin-wide-regular-orange.png";
+import closedEyes from "../assets/icons/face-smile-beam-regular-orange.png";
+import user from "../assets/icons/user-solid-orange.png";
 import google from "../assets/icons/google-brands-solid.png";
 import home from "../assets/icons/house-solid.png";
 import key from "../assets/icons/key-solid.png";
@@ -28,6 +29,7 @@ export default {
     smile,
     openEyes,
     closedEyes,
+    user,
     google,
     home,
     keyOrange,

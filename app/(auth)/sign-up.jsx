@@ -14,8 +14,9 @@ import FormField from '../../components/FormField';
 import { Link } from 'expo-router';
 
 
-const SignIn = () => {
+const SignUp = () => {
     const [form, setForm] = useState({
+        username: '',
         email: '',
         password: '',
     })
@@ -31,7 +32,7 @@ const SignIn = () => {
             <ScrollView>
                 <View className="w-full justify-center items-center px-4 my-6">
                     <Text className="text-5xl font-primary_font text-orange mt-10">PrepMate</Text>
-                    <Text className="text-lg font-primary_font text-navy mt-3 mb-10">Log in to PrepMate</Text>
+                    <Text className="text-lg font-primary_font text-navy mt-3 mb-10">Create an account</Text>
 
                     <Image
                         source={icons.placeHolderIcon}
@@ -41,6 +42,16 @@ const SignIn = () => {
                 </View>
 
                 <View className="px-4">
+                    <FormField
+                        icon={icons.user}
+                        title="Username"
+                        value={form.username}
+                        handleChangeText={(e) =>
+                            setForm({ ...form, username: e })}
+                        otherStyles="border-4 border-solid border-orange rounded-full"
+                        placeholder="Username"
+                    />
+
                     <FormField
                         icon={icons.envelopeOrange}
                         title="Email"
@@ -61,16 +72,9 @@ const SignIn = () => {
                         otherStyles="border-4 border-solid border-orange rounded-full"
                         placeholder="******"
                     />
-                    <View className="justify-center items-center flex-row pb-2 gap-2">
-                        <Text className="text-md font-primary_font text-navy">Don't have an account?</Text>
-
-                        <Link href="./sign-up" className='font-primary_font text-md text-orange'>
-                            Sign Up
-                        </Link>
-                    </View>
 
                     <CustomButton
-                        title="SIGN IN"
+                        title="SIGN UP"
                         handlePress={submit}
                         isLoading={isSubmitting}
                         containerStyles="w-full mt-2 bg-orange pb-4"
@@ -84,10 +88,10 @@ const SignIn = () => {
                     />
 
                     <View className="justify-center items-center flex-row pt-5 gap-2">
-                        <Text className="text-md font-primary_font text-navy">Forgot Password?</Text>
+                        <Text className="text-md font-primary_font text-navy">Already have an account?</Text>
 
-                        <Link href="./sign-up" className='font-primary_font text-md text-orange'>
-                            Click Here
+                        <Link href="./sign-in" className='font-primary_font text-md text-orange'>
+                            Sign In
                         </Link>
                     </View>
                 </View>
@@ -102,5 +106,5 @@ const SignIn = () => {
     )
 }
 
-export default SignIn
+export default SignUp
 
