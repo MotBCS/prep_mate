@@ -6,10 +6,10 @@ module.exports = {
       colors: {
         // Background Color
         primary: "#FCFCFC",
-        creme: "",
-        navy: "",
-        orange: "",
-        green: "",
+        creme: "#F5E5DD",
+        navy: "#345269",
+        orange: "#BD4F00",
+        green: "#71A95E",
       },
 
       fontFamily: {
