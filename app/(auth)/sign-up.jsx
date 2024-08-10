@@ -1,4 +1,4 @@
-import { View, Text, ScrollView, Image } from 'react-native'
+import { View, Text, ScrollView, Image, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar';
@@ -12,20 +12,45 @@ import CustomButton from '../../components/CustomButton';
 //Import Custom FormField Component
 import FormField from '../../components/FormField';
 import { Link } from 'expo-router';
+import { createUser } from '../../lib/appwrite';
 
 
 const SignUp = () => {
+    const [isSubmitting, setSubmitting] = useState(false);
     const [form, setForm] = useState({
         username: '',
         email: '',
         password: '',
-    })
+    });
 
-    const [isSubmitting, setisSubmitting] = useState(false)
 
-    const submit = () => {
 
-    }
+    // When the submit btn is clicked in the app, the createUser function
+    // from 'appwrite.js' is called.
+    const submit = async () => {
+        // Check if we have data to pass in, if any of these fields are
+        // empty trigger an alert
+        if (form.username === "" || form.email === "" || form.password === "") {
+            Alert.alert('Error', 'Please fill in all fields.');
+        }
+        // If we have all the fields, 'setisSubmitting' to true
+        setSubmitting(true);
+
+        try {
+            const result = await createUser(
+                form.email,
+                form.password,
+                form.username,
+            );
+
+            // Set it to global state
+            router.replace("/sign-in");
+        } catch (error) {
+            Alert.alert('Error', error.message);
+        } finally {
+            setSubmitting(false);
+        }
+    };
 
     return (
         <SafeAreaView className="bg-primary h-full">
