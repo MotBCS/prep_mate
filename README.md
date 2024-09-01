@@ -5,19 +5,22 @@ or shopping for tonight's dinner. PrepMate simplifies your food journey!
 ![PrepMate_Card](https://github.com/user-attachments/assets/62f2405c-87cc-43ba-8cac-db758e8174e0)
 
 
-Current Features:
+# Current Features:
 - Meal Plan for a 7-day week
 - Discover Recipes
 - Create a grocery list
 
-Future Features:
+![PrepMate_DetailsCard](https://github.com/user-attachments/assets/a1297a39-396c-4936-9cf9-a13955451aaa)
+
+
+# Future Features:
 - Smart grocery list (returns the cheapest price of items on the grocery list from stores in your area)
 - Personal AI prep chef
 - Calorie counter
 
-Frontend
+# Frontend
 - Expo
 - React Native (For cross-platform development on IOS and Android)
 
-Database and Authentication
+# Database and Authentication
 - Firebase
