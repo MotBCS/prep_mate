@@ -1,5 +1,5 @@
 # PrepMate - Mobile Meal Planner Application
-Transform your meal prep gram with PrepMate! Whether you're meal-prepping for the week
+Transform your meal prep game with PrepMate! Whether you're meal-prepping for the week
 or shopping for tonight's dinner. PrepMate simplifies your food journey!
 
 ![PrepMate_Card](https://github.com/user-attachments/assets/62f2405c-87cc-43ba-8cac-db758e8174e0)
